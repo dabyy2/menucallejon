@@ -1,0 +1,68 @@
+﻿/* Estilos para la lista vertical */
+.list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 10px;
+    list-style-type: none; /* Quitamos los marcadores de lista */
+}
+
+    /* Estilos para invertir colores al pasar el mouse */
+    .list-item:hover {
+        background-color: white;
+        color: black;
+    }
+
+    /* Estilos para invertir colores al hacer clic */
+    .list-item:active {
+        background-color: white;
+        color: black;
+    }
+
+    /* Estilos adicionales para resaltar el clic */
+    .list-item:active {
+        transform: scale(0.95);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .list-item strong {
+        font-size: 2.4em; /* Tamaño de fuente más grande */
+        text-decoration: double; /* Estilo de subrayado "double" */
+    }
+    /* Estilos para los ingredientes */
+    .list-item .ingredientes {
+        font-size: 1.8em; /* Tamaño de fuente más grande */
+        margin: 10px 0; /* Espacio entre el título y los ingredientes */
+    }
+
+    /* Estilos para el precio */
+    .list-item .precios {
+        font-size: 2.0em; /* Tamaño de fuente más grande */
+    }
+
+/* Estilos responsive */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .list-item {
+        padding: 4vw; /* Ajustar el padding proporcionalmente */
+        margin-bottom: 2vh; /* Ajustar el margen proporcionalmente */
+    }
+
+        .list-item strong {
+            font-size: 6vw; /* Tamaño de fuente proporcional */
+        }
+
+        .list-item .ingredientes,
+        .list-item .precios {
+            font-size: 4vw; /* Tamaño de fuente proporcional */
+        }
+ 
+}
